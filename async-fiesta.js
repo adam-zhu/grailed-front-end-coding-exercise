@@ -11,7 +11,7 @@ $(() => {
       return [ arr ];
     }
 
-    return [arr.slice(0, chunk_size)].concat(chunkify(chunk_size)(arr.slice(chunk_size, arr.length)));
+    return [ arr.slice(0, chunk_size) ].concat(chunkify(chunk_size)(arr.slice(chunk_size, arr.length)));
   };
 
   const get_img_url_chunk = chunk => chunk.map(getImageUrl);
@@ -49,7 +49,7 @@ $(() => {
           load_chunk(url_chunk)
             .then(draw_chunk)
             .then(() => {
-              if (!stopped) {
+              if (stopped === false) {
                 startLoading();
               }
               else {
