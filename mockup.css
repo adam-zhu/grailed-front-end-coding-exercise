@@ -1,0 +1,115 @@
+body {
+	padding: 2rem 4rem;
+}
+
+section {
+	margin-bottom: 10rem;
+	position: relative;
+}
+
+.hero div.text {
+	width: 40%;
+}
+
+.hero h1 {
+	font-size: 4rem;
+	margin-top: 1rem;
+}
+
+.hero p {
+	font-size: 1.5rem;
+	margin-bottom: 7.5rem;
+}
+
+.hero a {
+	font-size: 2.25rem;
+	color: black;
+}
+
+.hero img {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 70%;
+	opacity: .75;
+	z-index: -1;
+}
+
+.curated_lists img {
+	width: 22.5%;
+	margin-right: 7.5%;
+	margin-bottom: 10rem;
+}
+
+.curated_lists img:nth-of-type(2) {
+	margin-bottom: 0;
+	margin-top: 10rem;
+}
+
+.curated_lists span {
+	display: inline-block;
+	white-space: nowrap;
+	position: absolute;
+	font-size: 2.25rem;
+	top: 4rem;
+}
+
+.curated_lists span:first-of-type {
+	left: 17.5%;
+}
+
+.curated_lists span:nth-of-type(2) {
+	left: 47.5%;
+	top: auto;
+	bottom: 2rem;
+}
+
+.curated_lists span:nth-of-type(3) {
+	left: 77.5%;
+}
+
+.curated_for_you {
+	text-align: center;
+	overflow: auto;
+	zoom: 1;
+}
+
+.curated_for_you h2 {
+	font-size: 2.25rem;
+}
+
+.curated_for_you article {
+	width: 20%;
+	margin: 2.5%;
+	float: left;
+	text-align: left;
+}
+
+.curated_for_you img {
+	max-width: 100%;
+}
+
+.curated_for_you .age {
+	font-size: .8rem;
+}
+
+.curated_for_you .brand_size {
+	margin: .4rem 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.curated_for_you .name {
+	display: block;
+	margin-bottom: .4rem;
+}
+
+
+
+
+
+
+
+
+
