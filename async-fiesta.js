@@ -34,36 +34,33 @@ $(() => {
   const url_chunks = id_chunks.map(get_img_url_chunk);
 
   let stopped = false;
-  let timer;
 
   const startLoading = () => {
     console.log('Start!'); // this console.log now happens every chunk render
 
     stopped = false;
 
-    if (stopped === false) {
-      if (url_chunks.length > 0) {
-        const url_chunk = url_chunks.shift(); // mutates url_chunks (if you successed and want to start again tough titties)
+    if (url_chunks.length > 0) {
+      const url_chunk = url_chunks.shift(); // mutates url_chunks (if you successed and want to start again tough titties)
 
-        load_chunk(url_chunk)
-          .then(draw_chunk)
-          .then(() => {
-            if (stopped === false) {
-              startLoading();
-            }
-          })
-          .catch(e => {
-            console.error(e);
-            draw(e.toString());
+      load_chunk(url_chunk)
+        .then(draw_chunk)
+        .then(() => {
+          if (stopped === false) {
+            startLoading();
+          }
+        })
+        .catch(e => {
+          console.error(e);
+          draw(e.toString());
 
-            if (stopped === false && url_chunks.length > 0) {
-              startLoading();
-            }
-          });
-      }
-      else {
-        console.log("success");
-      }
+          if (stopped === false) {
+            startLoading();
+          }
+        });
+    }
+    else {
+      console.log("success");
     }
   };
 
